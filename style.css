@@ -1,5 +1,7 @@
 :root {
-	font-size: 16px; /*This sets the font-size all over the document. Default: 16px;*/
+	font-size: 16px; /*This sets the font-size all over the document. Default: 16px;
+	You can set all other value relative to this value. I mean, this is the easiest way to 
+	changing a whole complex object with changing one value. See bottom the @media block.*/
 }
 
 body, html { 
@@ -21,6 +23,8 @@ main {
 }
 
 #card {
+	position: relative; /*The below absolute positioned element will set to this relative 
+	positioned element.*/
 	background-color: hsl(216, 50%, 16%);
 	width: 21.93rem;
 	height: 37.31rem;
@@ -31,13 +35,41 @@ main {
 	align-items: left;
 }
 
-#head-img  {
+#img-head  {
 	width: 18.75rem;
 	height: 18.75rem;
 	border-radius: 0.5rem;
-	margin: auto;
+	margin-left: 1.5625rem;
+	margin-right: 1.5625rem;
     margin-top: 1.5625rem;
     margin-bottom: 0;
+}
+
+#div-over-img {
+	position: absolute; /*This element is positioned relative to its 
+	first positioned (not static, e.g: relative) ancestor element. See above.*/
+	top: 1.5625rem;
+	left: 1.5625rem;
+	width: 18.75rem;
+	height: 18.75rem;
+	background-color: hsla(178, 100%, 50%, 0.5); /* The hsla is same as hsl but there 
+	is a fourth (opacity) parameter. */
+	border-radius: 0.5rem;
+	opacity: 0;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
+}
+
+#div-over-img img {
+	width: 3rem;
+}
+
+#div-over-img:hover {
+	opacity: 1;
+	cursor: pointer;
 }
 
 h1 {
@@ -49,10 +81,16 @@ h1 {
 	font-weight: 600;
 }
 
+h1:hover {
+	color: hsl(178, 100%, 50%);
+	cursor: pointer;
+}
+
 #p-our {
 	color: hsl(215, 51%, 70%);
 	margin: 0 1.5625rem;
 	line-height: 1.7rem;
+	font-size: 1.13rem;
 }
 
 #div-ethereum {
@@ -76,16 +114,23 @@ h1 {
 
 #img-ethereum, #img-clock {
 	vertical-align: -3px;
+	margin-right: 0.3rem;
 }
 
 span {
 	color: hsl(0, 0%, 100%);
 }
 
+span:hover {
+	color: hsl(178, 100%, 50%);
+	cursor: pointer;
+}
+
 hr {
 	border-color: hsl(215, 51%, 70%);
 	width: 18.75rem;
 	border-width: 1px;
+	opacity: 0.5;
 }
 
 #div-avatar {
