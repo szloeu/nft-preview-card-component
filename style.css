@@ -1,0 +1,122 @@
+:root {
+	font-size: 16px; /*This sets the font-size all over the document. Default: 16px;*/
+}
+
+body, html { 
+    margin: 0;
+    padding: 0;
+    /* Must both parameters set when vertical scrollbar appears with min-height: 100vh. */
+}
+
+body {
+	background-color: hsl(217, 54%, 11%);
+	font-family: 'Outfit', sans-serif;
+}
+
+main {
+	display: flex;
+	align-items: center; 
+  	justify-content: center; 
+  	height: 100vh;
+}
+
+#card {
+	background-color: hsl(216, 50%, 16%);
+	width: 21.93rem;
+	height: 37.31rem;
+	border-radius: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: left;
+}
+
+#head-img  {
+	width: 18.75rem;
+	height: 18.75rem;
+	border-radius: 0.5rem;
+	margin: auto;
+    margin-top: 1.5625rem;
+    margin-bottom: 0;
+}
+
+h1 {
+	color: hsl(0, 0%, 100%);
+	font-size: 1.35rem;
+	margin-left: 1.5625rem;
+	margin-top: 1.6rem;
+	margin-bottom: 1.1rem;
+	font-weight: 600;
+}
+
+#p-our {
+	color: hsl(215, 51%, 70%);
+	margin: 0 1.5625rem;
+	line-height: 1.7rem;
+}
+
+#div-ethereum {
+	margin-top: 0.3rem;
+    margin-right: 1.5625rem;
+    margin-bottom: 0;
+    margin-left: 1.5625rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+#p-ethereum-left {
+	color: hsl(178, 100%, 50%);
+	font-weight: 400;
+}
+
+#p-ethereum-right {
+	color: hsl(215, 51%, 70%);
+}
+
+#img-ethereum, #img-clock {
+	vertical-align: -3px;
+}
+
+span {
+	color: hsl(0, 0%, 100%);
+}
+
+hr {
+	border-color: hsl(215, 51%, 70%);
+	width: 18.75rem;
+	border-width: 1px;
+}
+
+#div-avatar {
+	display: flex;
+	flex-direction: row;
+	color: hsl(215, 51%, 70%);
+	margin-left: 1.5625rem;
+}
+
+#pic-avatar {
+	width: 2rem;
+	height: 2rem;
+	vertical-align: middle;
+	border: 1px solid;
+	border-color: hsl(0, 0%, 100%);
+	border-radius: 50%;
+	margin-right: 1rem;
+}
+
+#p-avatar {
+	margin-top: 0.5rem;
+}
+
+@media (max-width: 380px) {
+
+	:root {
+	font-size: 15px; 
+}
+
+}
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
